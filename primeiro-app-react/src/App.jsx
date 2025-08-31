@@ -8,12 +8,17 @@ awards,
 discovery,
 imageSize = 70
 }){
+
+let thumbnailSize = 's';
+if (imageSize > 90) {
+    thumbnailSize = 'b';
+}
 return (
   <section className="profile">
     <h1>{name}</h1>
     <img
       classname="avatar"
-      src={getImageUrl(imageId)}
+      src={getImageUrl(imageId, thumbnailSize)}
       alt={name}
       width={imageSize}
       height={imageSize}
